@@ -1,0 +1,74 @@
+<!DOCTYPE>
+<html lang="en">
+  <head>
+     
+     <!--Load TensorFlow FaceMesh-->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh"></script>
+
+    <!--Load TensorFlow Core-->
+     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+
+    <!-- You must explicitly require a TF.js backend if you're not using the TF.js union bundle. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
+
+    <!-- Required External Libraries -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/stats.js"></script>
+
+     <!-- Custom CSS -->
+
+     <link id = "css" rel="stylesheet" href="../css/index.css">
+
+   
+  </head>
+
+  <body id="body">
+
+    <div id="container">
+     
+
+      <video id="video" playsinline style="
+          visibility: hidden;
+          width: auto;
+          height: auto;
+          ">
+      </video>
+      
+      <canvas id="cropped-video"></canvas>
+
+      <canvas id="formatted-video"></canvas>
+            
+    </div>
+         
+
+
+    <div class="canvas-wrapper">
+
+      <video id="video" playsinline style="
+          visibility: hidden;
+          width: auto;
+          height: auto;
+          ">
+      </video>
+      <canvas id="cropped-video"></canvas>
+
+  </body>
+ 
+  <!-- Loading Params -->
+  <script src="../js/params.js"></script>
+  <script src="../js/gui.js"></script>
+  <script src="../js/camera.js"></script>
+  <script src="../js/artwork.js"></script>
+
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      main()
+  });
+    
+  </script>
+    
+</html>
